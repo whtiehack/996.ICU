@@ -2,20 +2,18 @@ package main
 
 import (
 	"bufio"
-	"bytes"
 	"context"
 	"encoding/json"
-	"fmt"
 	"github.com/google/go-github/github"
 	"golang.org/x/oauth2"
 	"io/ioutil"
 	"log"
-	"net/http"
 	"os"
 	"path"
 	"regexp"
 	"strings"
 	"sync"
+	"time"
 )
 
 var fakeRepository = make(chan string, 20)
@@ -47,10 +45,11 @@ func main() {
 		log.Fatal(err)
 	}
 	content := string(data)
-	reg := regexp.MustCompile(`\(https://github.com/.*?/.*?\)`)
+	reg := regexp.MustCompile(`\(https://github.com/.*?\)`)
 	strArr := reg.FindAllString(content, -1)
 	strArr = RemoveDuplicatesAndEmpty(strArr)
-	log.Printf("%q\n", strArr)
+	urls, _ := json.Marshal(strArr)
+	log.Printf("%s\n", urls)
 
 	chanlen := 10
 	check := make(chan string, chanlen)
@@ -62,12 +61,18 @@ func main() {
 		go processUrl(check, &wg)
 	}
 	for idx, str := range strArr {
-		fmt.Println(idx, str)
 		str = str[githubPrefixLen : len(str)-1]
-		check <- str
-		if idx > 5 {
-			break
+		if str[len(str)-1] == '/' {
+			str = str[:len(str)-1]
 		}
+		if strings.Count(str, "/") == 0 {
+			continue
+		}
+		log.Println(idx, str)
+
+		check <- str
+		time.Sleep(time.Second * 5)
+
 	}
 	close(check)
 	wg.Wait()
@@ -123,29 +128,13 @@ type PrBot struct {
 }
 
 func createPR(fakeRepo []string, content string) error {
-	/**
-	curl -X POST \
-	  https://xrbhog4g8g.execute-api.eu-west-2.amazonaws.com/prod/prb0t \
-	  -H 'cache-control: no-cache' \
-	  -H 'content-type: application/json' \
-	  -d '{
-	  "user": "whtiehack",
-	  "repo": "hello-world",
-	  "description": "aaa",
-	  "title": "Dare to try",
-	  "commit": "a try",
-	  "files": [
-		{"path": "Config.txt", "content": "Failure is when you stop trying to do something."}
-	  ],"token":""
-	}'
-	*/
 	const url = "https://xrbhog4g8g.execute-api.eu-west-2.amazonaws.com/prod/prb0t"
 	const contentType = "application/json; charset=utf-8"
 	prbot := PrBot{}
 	prbot.User = "whtiehack"
 	prbot.Repo = "996.ICU"
-	prbot.Description = "Fake repositories:\n" + githubPrefix[1:] + strings.Join(fakeRepo, "\n"+githubPrefix[1:]) + " "
-	prbot.Title = "Remove fake license repositories."
+	prbot.Description = "Fake 996 license repositories:\n" + githubPrefix[1:] + strings.Join(fakeRepo, "\n"+githubPrefix[1:]) + " "
+	prbot.Title = "Remove fake 996 license repositories."
 	prbot.Commit = prbot.Title
 	prbot.Files = []struct {
 		Content string `json:"content"`;
@@ -155,15 +144,18 @@ func createPR(fakeRepo []string, content string) error {
 	}
 	prbot.Token = TOKEN
 	pb, _ := json.Marshal(prbot)
-	fmt.Println("pb", string(pb))
-	resp, err := http.Post(url, contentType, bytes.NewReader(pb))
-	if err != nil {
-		log.Println("createPR error", err)
-		return err
-	}
-	defer resp.Body.Close()
-	body, _ := ioutil.ReadAll(resp.Body)
-	log.Println("createPR result", string(body))
+	log.Println("pb", string(pb))
+	log.Println("Description", prbot.Description)
+	ioutil.WriteFile(".projects.md", []byte(content), 0777)
+
+	//resp, err := http.Post(url, contentType, bytes.NewReader(pb))
+	//if err != nil {
+	//	log.Println("createPR error", err)
+	//	return err
+	//}
+	//defer resp.Body.Close()
+	//body, _ := ioutil.ReadAll(resp.Body)
+	//log.Println("createPR result", string(body))
 	return nil
 }
 
@@ -178,6 +170,7 @@ func processUrl(c <-chan string, wg *sync.WaitGroup) {
 	client := github.NewClient(tc)
 	for repoName := range c {
 		count++
+		time.Sleep(time.Second * 10)
 		log.Println("begin check ", repoName)
 		b, err := checkHas996(repoName, client)
 		if err != nil {
@@ -202,7 +195,7 @@ func checkHas996(repo string, client *github.Client) (bool, error) {
 		return false, nil
 	}
 	for _, item := range csr.CodeResults {
-		if strings.HasPrefix(strings.ToUpper(*item.Path), "LICENSE") {
+		if strings.HasPrefix(strings.ToUpper(*item.Path), "LICENSE") || strings.HasPrefix(strings.ToUpper(*item.Path), "README") {
 			return true, nil
 		}
 	}
