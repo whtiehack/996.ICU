@@ -6,8 +6,8 @@ matrix:
       go_import_path: github.com/whtiehack/996.ICU
 
       install:
-        - echo "install
-        
+        - echo "install"
+
       script:
         - echo "script list"
         - go run ./blacklist/archive
