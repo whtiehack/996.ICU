@@ -1,32 +1,26 @@
-language: go
-
 matrix:
   fast_finish: true
   include:
-    - go: 1.11.x
+    - language: go
+      go: 1.11.x
+      go_import_path: github.com/whtiehack/996.ICU
+
+      install:
+        - echo "install
+        
+      script:
+        - echo "script list"
+        - go run ./blacklist/archive
+
+      after_script:
+        - sleep 1
+
+      after_success:
+        - echo "after_success"
+        - sleep 1
+
 
 git:
   depth: 10
 
-before_install:
-  - echo "before_install"
-
-install:
-  - echo "install"
-  - go get github.com/google/go-github/github
-  - go get golang.org/x/oauth2
-
-go_import_path: github.com/whtiehack/996.ICU
-
-script:
-  - echo "script list"
-  - go run ./blacklist/archive
- 
-
-after_script:
-  - sleep 1
-
-after_success:
-  - echo "after_success"
-  - sleep 1
 

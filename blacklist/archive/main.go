@@ -5,10 +5,13 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"net/url"
 	"os"
 	"path"
 	"regexp"
+	"strings"
 	"sync"
+	"time"
 )
 
 func main() {
@@ -44,19 +47,22 @@ func main() {
 func processUrl(check chan string, wg *sync.WaitGroup) {
 
 	defer wg.Done()
+	client := &http.Client{}
 	for {
 		str, ok := <-check
 		if !ok {
 			log.Println("process end")
 			return
 		}
-		b, err := checkExists(str)
+		u := encodeURIComponent(str)
+		b, err := checkExists(client, u)
 		if err != nil {
 			log.Println("url error:", str, b, err)
 		}
 
 		if !b {
-			err = saveUrl(str)
+			log.Println("url save:", str)
+			err = saveUrl(client, str)
 			if err != nil {
 				log.Println("save url error", str, err)
 			}
@@ -77,12 +83,21 @@ type availableResponse struct {
 	URL string `json:"url"`
 }
 
-func checkExists(url string) (bool, error) {
-	resp, err := http.Get("https://archive.org/wayback/available?url=" + url)
+func checkExists(client *http.Client, url string) (bool, error) {
+	req, err := http.NewRequest("GET", "https://archive.org/wayback/available?url="+url, nil)
+	if err != nil {
+		return false, err
+	}
+	resp, err := client.Do(req)
 	if err != nil {
 		return false, err
 	}
 	defer resp.Body.Close()
+	if resp.StatusCode == 503 {
+		// 503 Service Temporarily Unavailable
+		time.Sleep(time.Second * 2)
+		return checkExists(client, url)
+	}
 	body, err := ioutil.ReadAll(resp.Body)
 	var r availableResponse
 	err = json.Unmarshal(body, &r)
@@ -94,12 +109,21 @@ func checkExists(url string) (bool, error) {
 	return r.ArchivedSnapshots.Closest.Timestamp != "", nil
 }
 
-func saveUrl(url string) error {
-	resp, err := http.Get("https://web.archive.org/save/" + url)
-	log.Println("save url", url)
+func saveUrl(client *http.Client, u string) error {
+	req, err := http.NewRequest("GET", "https://web.archive.org/save/"+u, nil)
+	if err != nil {
+		return err
+	}
+	resp, err := client.Do(req)
 	if err != nil {
 		return err
 	}
 	defer resp.Body.Close()
 	return nil
+}
+
+func encodeURIComponent(str string) string {
+	r := url.QueryEscape(str)
+	r = strings.Replace(r, "+", "%20", -1)
+	return r
 }
