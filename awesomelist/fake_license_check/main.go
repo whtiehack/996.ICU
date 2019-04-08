@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"context"
 	"encoding/json"
+	"errors"
 	"github.com/google/go-github/github"
 	"golang.org/x/oauth2"
 	"io/ioutil"
@@ -28,9 +29,14 @@ func init() {
 	TOKEN = os.Getenv("GH_TOKEN")
 	if TOKEN == "" {
 		cwd, _ := os.Getwd()
-		data, err := ioutil.ReadFile(cwd + "/awesomelist/fake_license_check/.token")
+		if !strings.HasSuffix(cwd, "fake_license_check") {
+			cwd += "/awesomelist/fake_license_check/.token"
+		} else {
+			cwd += "/.token"
+		}
+		data, err := ioutil.ReadFile(cwd)
 		if err != nil {
-			log.Fatal("failed get github token")
+			log.Fatal("failed get github token", cwd)
 		}
 		TOKEN = string(data)
 	}
@@ -200,6 +206,23 @@ func checkHas996(repo string, client *github.Client) (bool, error) {
 		}
 	}
 	return false, nil
+}
+
+func checkHas996Newer(repo string, client *github.Client) (bool, error) {
+	// https://developer.github.com/v3/repos/community/
+	arr := strings.Split(repo, "/")
+	if len(arr) != 2 {
+		return false, errors.New("checkHas996Newer,repo error:" + repo)
+	}
+	chm, resp, err := client.Repositories.GetCommunityHealthMetrics(context.TODO(), arr[0], arr[2])
+	if err != nil {
+		return false, err
+	}
+	defer resp.Body.Close()
+	if chm == nil || resp.StatusCode != 200 {
+		return false, nil
+	}
+	return true, nil
 }
 
 func RemoveDuplicatesAndEmpty(a []string) (ret []string) {
