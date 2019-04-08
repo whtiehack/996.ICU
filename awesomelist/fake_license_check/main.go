@@ -2,7 +2,9 @@ package main
 
 import (
 	"bufio"
+	"bytes"
 	"context"
+	"encoding/base64"
 	"encoding/json"
 	"errors"
 	"github.com/google/go-github/github"
@@ -178,7 +180,7 @@ func processUrl(c <-chan string, wg *sync.WaitGroup) {
 		count++
 		time.Sleep(time.Second * 10)
 		log.Println("begin check ", repoName)
-		b, err := checkHas996(repoName, client)
+		b, err := CheckHas996(repoName, client)
 		if err != nil {
 			log.Println("error", repoName, err)
 			continue
@@ -191,21 +193,33 @@ func processUrl(c <-chan string, wg *sync.WaitGroup) {
 	log.Println("process end", count)
 }
 
-func checkHas996(repo string, client *github.Client) (bool, error) {
-	csr, resp, err := client.Search.Code(context.TODO(), "996 repo:"+repo+" in:file", nil)
-	if err != nil {
+func checkContent(content string) bool {
+	arr := strings.Split(content, "\n")
+	for _, str := range arr {
+		v, _ := base64.StdEncoding.DecodeString(str)
+		if bytes.Index(v, []byte("996")) >= 0 {
+			return true
+		}
+	}
+	return false
+}
+
+func CheckHas996(repo string, client *github.Client) (bool, error) {
+	arr := strings.Split(repo, "/")
+	chm, resp, err := client.Repositories.GetReadme(context.TODO(), arr[0], arr[1], nil)
+	if err != nil || chm == nil || chm.Content == nil {
 		return false, err
 	}
 	defer resp.Body.Close()
-	if csr == nil || resp.StatusCode != 200 {
-		return false, nil
+	if checkContent(*chm.Content) {
+		return true, nil
 	}
-	for _, item := range csr.CodeResults {
-		if strings.HasPrefix(strings.ToUpper(*item.Path), "LICENSE") || strings.HasPrefix(strings.ToUpper(*item.Path), "README") {
-			return true, nil
-		}
+	gr, respLicense, err := client.Repositories.License(context.TODO(), arr[0], arr[1], )
+	if err != nil || gr == nil || gr.Content == nil {
+		return false, err
 	}
-	return false, nil
+	defer respLicense.Body.Close()
+	return checkContent(*gr.Content), nil
 }
 
 func checkHas996Newer(repo string, client *github.Client) (bool, error) {

@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"github.com/google/go-github/github"
 	"golang.org/x/oauth2"
+	"log"
 	"testing"
 )
 
@@ -50,4 +51,14 @@ func TestGetReadme(t *testing.T) {
 	gr, resp, err := client.Repositories.License(context.TODO(), "corpnewt", "gibMacOS")
 	jv, _ = json.Marshal(gr)
 	t.Logf("license:%s", string(jv))
+}
+
+func TestCheckHas996(t *testing.T) {
+	ctx := context.Background()
+	ts := oauth2.StaticTokenSource(
+		&oauth2.Token{AccessToken: TOKEN},
+	)
+	tc := oauth2.NewClient(ctx, ts)
+	client := github.NewClient(tc)
+	log.Print(CheckHas996("whtie/hello-world", client))
 }
