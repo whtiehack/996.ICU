@@ -4,8 +4,9 @@
 
 The name `996.ICU` refers to **"Work by '996', sick in ICU"**, an ironic saying among Chinese developers, which means that by following the "996" work schedule, you are risking yourself getting into the ICU (Intensive Care Unit).
 
+[![Badge](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg)](https://996.icu/)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
-[![Badge](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu/#/zh_CN)
+[![Slack](https://img.shields.io/badge/slack-996icu-green.svg)](https://join.slack.com/t/996icu/shared_invite/enQtNTg4MjA3MzA1MzgxLWQyYzM5M2IyZmIyMTVjMzU5NTE5MGI5Y2Y2YjgwMmJiMWMxMWMzNGU3NDJmOTdhNmRlYjJlNjk5ZWZhNWIwZGM)
 
 <a href="https://www.patreon.com/996icu">
   <img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="150">
@@ -43,7 +44,7 @@ A "996" work schedule refers to an unofficial work schedule (9 a.m.&ndash;9 p.m.
 What can I do?
 ---
 
-- Update this [list](blacklist/blacklist.md) with evidence to help every worker.  
+- Update this [list](blacklist/README.md) with evidence to help every worker.  
 - Add this [badge](externals/instruction.md) to your project to support 996.ICU.  
 - License your awesome projects with the [Anti 996 License](LICENSE).  
 - Add proposals to give advice about the development of 996.ICU.
@@ -107,7 +108,7 @@ License
 [Anti-996 License](LICENSE)
 
  - The purpose of this license is to prevent anti-labour-law companies from using the software or codes under the license, and force those companies to weigh their way of working
- - See a [full list of projects](awesomelist/projects.md) under Anti-996 License
+ - See a [full list of projects](awesomelist/README.md) under Anti-996 License
  - It is an idea of @xushunke: [Design A Software License Of Labor Protection -- Anti 996 License](https://github.com/996icu/996.ICU/pull/15642)
  - This version of Anti-996 License is drafted by [Katt Gu, J.D, University of Illinois, College of Law](https://scholar.google.com.sg/citations?user=PTcpQwcAAAAJ&hl=en&oi=ao); advised by [Suji Yan](https://www.linkedin.com/in/tedkoyan/), CEO of [Dimension](https://www.dimension.im).  
  - This draft is adapted from the MIT license. For more detailed explanation, please see [Wiki](https://github.com/kattgu7/996-License-Draft/wiki). This license is designed to be compatible with all major open source licenses.  
