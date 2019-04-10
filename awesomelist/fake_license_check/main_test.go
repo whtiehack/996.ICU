@@ -48,7 +48,7 @@ func TestGetReadme(t *testing.T) {
 	jv, _ := json.Marshal(chm)
 	t.Logf("readme:%s", string(jv))
 
-	gr, resp, err := client.Repositories.License(context.TODO(), "corpnewt", "gibMacOS")
+	gr, resp, err := client.Repositories.License(context.TODO(), "unarxiv", "cvpm")
 	jv, _ = json.Marshal(gr)
 	t.Logf("license:%s", string(jv))
 }

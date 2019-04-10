@@ -23,7 +23,7 @@ var fakeRepository = make(chan string, 20)
 
 const githubPrefix = "(https://github.com/"
 const githubPrefixLen = len(githubPrefix)
-const projectPath = "/awesomelist/projects.md"
+const projectPath = "/awesomelist/README.md"
 
 var TOKEN = ""
 

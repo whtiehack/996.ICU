@@ -16,7 +16,7 @@ import (
 
 func main() {
 	cwd, _ := os.Getwd()
-	filePath := "/blacklist/blacklist.md"
+	filePath := "/blacklist/README.md"
 	filePath = path.Join(cwd, filePath)
 	log.Println("cwd", cwd, filePath)
 	data, err := ioutil.ReadFile(filePath)
