@@ -84,7 +84,7 @@ type availableResponse struct {
 }
 
 func checkExists(client *http.Client, url string) (bool, error) {
-	req, err := http.NewRequest("GET", "https://archive.org/wayback/available?url="+url, nil)
+	req, err := http.NewRequest("GET", "https://archive.org/wayback/available?url="+strings.Split(url, "?")[0], nil)
 	if err != nil {
 		return false, err
 	}
@@ -110,7 +110,7 @@ func checkExists(client *http.Client, url string) (bool, error) {
 }
 
 func saveUrl(client *http.Client, u string) error {
-	req, err := http.NewRequest("GET", "https://web.archive.org/save/"+u, nil)
+	req, err := http.NewRequest("GET", "https://web.archive.org/save/"+strings.Split(u, "?")[0], nil)
 	if err != nil {
 		return err
 	}
