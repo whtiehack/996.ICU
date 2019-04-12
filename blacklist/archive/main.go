@@ -54,7 +54,8 @@ func processUrl(check chan string, wg *sync.WaitGroup) {
 			log.Println("process end")
 			return
 		}
-		u := encodeURIComponent(strings.Split(str, "?")[0])
+		purl := strings.Split(str, "?")[0]
+		u := encodeURIComponent(purl)
 		b, err := checkExists(client, u)
 		if err != nil {
 			log.Println("url error:", str, b, err)
@@ -62,7 +63,7 @@ func processUrl(check chan string, wg *sync.WaitGroup) {
 
 		if !b {
 			log.Println("url save:", str)
-			err = saveUrl(client, str)
+			err = saveUrl(client, purl)
 			if err != nil {
 				log.Println("save url error", str, err)
 			}
