@@ -2,6 +2,8 @@
 
 ## 中文媒体
 
+- 半月谈：[半月谈评论：996与奋斗无关，与利益有关](http://www.banyuetan.org/dyp/detail/20190415/1000200033134991555306789054254821_1.html)
+
 - 人民日报： [崇尚奋斗，不等于强制996](https://m.weibo.cn/status/4360947026232430)
 
 - 人民日报： [人民日报评论：不能给反对996的员工贴“混日子”标签](https://finance.ifeng.com/c/7lrctvSXirY)
@@ -100,6 +102,8 @@
 - 四川日报：[“工作996，生病ICU”上热搜 ，你的工作加班严重吗？](https://mp.weixin.qq.com/s/jkmRgTicyZyC604kIJhn-g)([Wayback Machine](https://web.archive.org/web/20190410031555/https://mp.weixin.qq.com/s/jkmRgTicyZyC604kIJhn-g))
 
 - 钱江晚报：[“996”工作制，道德绑架无法掩盖违法事实](http://qjwb.zjol.com.cn/html/2019-04/08/content_3757863.htm?div=-1)
+
+- 半月谈：[996与奋斗无关，与利益有关](https://mp.weixin.qq.com/s/cCrj8F2CQrlLTrBrwtcMqA)
 
 ### 非中国媒体
 
