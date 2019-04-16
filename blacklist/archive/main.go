@@ -54,8 +54,8 @@ func processUrl(check chan string, wg *sync.WaitGroup) {
 			log.Println("process end")
 			return
 		}
-		u := encodeURIComponent(str)
-		b, err := checkExists(client, u)
+	//	u := encodeURIComponent(str)
+		b, err := checkExists(client, str)
 		if err != nil {
 			log.Println("url error:", str, b, err)
 		}
