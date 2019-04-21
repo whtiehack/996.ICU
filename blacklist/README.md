@@ -29,6 +29,15 @@
 - 同公司不同部门规定有可能不同，公司在名单中不代表该公司全部岗位存在该情况，仅供参考。
 - 如果您认为名单中的某公司不应属此列或存在被抹黑的情况，请提PR说明情况，核实后将会更正或删除。
 
+已取消996名单列表
+----
+|所在城市|公司名字|曝光/施行时间|制度描述|证据内容|分支sha256|取消证据|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|上海|[小站教育](https://www.zhan.com/)||10106|[谁在小站教育工作过? 小站教育的课程顾问怎么样？](https://www.zhihu.com/question/27635270)||暂时没有查出是哪个分支取消的，但是我记忆力肯定是上过黑名单，请知道的大佬提交证据|
+|苏州|苏州科技城||996||5f0f3dd22b8fd0de1897a62206ca6df505af072f|智联上明确写了肯定是996，但是被这个分支取消了，不确定是故意还是无意|
+|北京|首约汽车||||bde8b2d8c89418b5553b199d91ba9394ccacc867|被无故取消，没有提交证据，希望提交证据|
+|六安|六安人论坛||||c18807f14ade6b12fc1042077a77ca9bd8de02d3|没有任何证据|
+|北京|必胜课||||a53f1aa6747a6fe4e27cb3475551875aa17bf11d|[盖章文件](img/必胜课取消证据01.png)|
 
 名单列表
 ---
@@ -110,6 +119,7 @@
 |成都|[tap4fun](https://www.tap4fun.com/)|2019年4月7日|996|[看准网](https://www.kanzhun.com/gsr59860tl56.html?ka=review-label15)|
 |成都|[成都二次元动漫有限公司](https://www.kanman.com/)|2018年12月1日|996|[图片-1](img/ecy1.jpg) [图片-2](img/ecy12.jpg)[图片-3](img/ecy4.jpg) + 亲历|
 |成都|[成都索贝数码科技股份有限公司](http://www.sobey.com/)|2019年4月8日| 996 无倒休 | [看准网](https://www.kanzhun.com/pl7169544.html) |
+|成都|[成都未知未来科技有限公司](https://cdxfuture.com/xf/)|2018年12月|大小周、拖欠工资，裁员无补偿|[周六加班](img/xf周六加班通知.png)，[提醒补加班](img/xf提醒补加班.png)，[裁员后还拖欠工资](img/xf被裁员拖欠薪资.jpg)，[仲裁书](img/xf劳动仲裁书.jpg)
 |苏州|[Momenta](https://www.momenta.cn/)|2019年4月|996,CEO朋友圈宣扬马云996|[微信截图](img/mbgwb.jpg)
 |武汉|[武汉斗鱼网络科技有限公司](https://www.douyu.com/)|2018年9月|每天至少加班两小时，拖欠大量工资，无加班费|[看准网](https://m.kanzhun.com/pl6708460.html）
 |北京|[蛋壳公寓](https://www.danke.com/)|2018年7月|10106/10107|[看准网](https://www.kanzhun.com/pl7093100.html?ka=review-item-ckqw)
@@ -166,3 +176,4 @@
 |西安|[易点天下](http://facebook.yeahmobi.com/)|-----|9116/9117|每天下午6点开始开会，动不动就通宵，管理层的一个是从华为挖过来的，有狂躁症，动不动就炸，肯恐怖。[工作截图](img/易点天下.jpeg)|
 |潍坊|[歌尔股份](https://www.goertek.com/)|2019年4月|大小周|[考勤规定](img/goertek.jpeg)|
 |济南|[浪潮集团](http://www.inspur.com/)|-----|996|奋进者申请书 [996工作制](https://baike.baidu.com/item/996%E5%B7%A5%E4%BD%9C%E5%88%B6/19940031?fromtitle=996&fromid=19958311&fr=aladdin#3)|
+|深圳|[紫优科技](https://www.zhipin.com/gongsir/7610a4892e11cc781XZ_09i1FA~~.html?ka=company-jobs)|2019年4月|9116| [公司老板发的招牌信息](img/深圳紫优科技.jpg)|
