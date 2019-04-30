@@ -121,8 +121,11 @@
 |成都|[tap4fun](https://www.tap4fun.com/)|2019年4月7日|996|[看准网](https://www.kanzhun.com/gsr59860tl56.html?ka=review-label15)|
 |成都|[成都二次元动漫有限公司](https://www.kanman.com/)|2018年12月1日|996|[图片-1](img/ecy1.jpg) [图片-2](img/ecy12.jpg)[图片-3](img/ecy4.jpg) + 亲历|
 |成都|[成都索贝数码科技股份有限公司](http://www.sobey.com/)|2019年4月8日| 996 无倒休 | [看准网](https://www.kanzhun.com/pl7169544.html) |
+|苏州|[Momenta](https://www.momenta.cn/)|2019年4月|996,CEO朋友圈宣扬马云996|[微信截图](img/mbgwb.jpg)
+|武汉|[武汉斗鱼网络科技有限公司](https://www.douyu.com/)|2018年9月|每天至少加班两小时，拖欠大量工资，无加班费|[看准网](https://m.kanzhun.com/pl6708460.html）
+|北京|[蛋壳公寓](https://www.danke.com/)|2018年7月|10106/10107|[看准网](https://www.kanzhun.com/pl7093100.html?ka=review-item-ckqw)
+|河北秦皇岛|[河北东软软件有限公司](https://www.neuqsoft.com/)|2019年4月|8.30-21,副总亲自回复邮件加班|[邮件截图](img/河北东软软件有限公司申请加班.png),[微信聊天记录](img/neuq_work_overtime_evidence2.jpg),[微信聊天记录2](img/neuq_work_overtime_evidence3.jpg)
 |成都|[成都未知未来科技有限公司](https://cdxfuture.com/xf/)|2018年12月|大小周、拖欠工资，裁员无补偿|[周六加班](img/xf周六加班通知.png)，[提醒补加班](img/xf提醒补加班.png)，[裁员后还拖欠工资](img/xf被裁员拖欠薪资.jpg)，[仲裁书](img/xf劳动仲裁书.jpg)
-|河北秦皇岛|[河北东软软件有限公司](https://www.neuqsoft.com/)|2019年4月|8.30-21,副总亲自回复邮件加班|[邮件截图](img/河北东软软件有限公司申请加班.png)
 |杭州|[阿里巴巴](https://www.alibabagroup.com/)|2018年6月|996|[阿里巴巴的996加班文化，看到这些恐怖数据，你也会辞职！](https://kuaibao.qq.com/s/20180612A1FAPU00)<br>[马云：996是修来的福报! 律师：涉嫌违法](http://m.sohu.com/a/307564633_241241)<br>[马云：后悔忙于工作 没时间陪家人 有来生绝不这样](https://v.qq.com/x/page/h0860wwt0xl.html)|
 |杭州|[蚂蚁金服](https://www.antfin.com/)|2018年11月|9106|[阿里前员工吐槽：从蚂蚁金服离职了，真的拿员工当蚂蚁使](https://t.cj.sina.com.cn/articles/view/6680234487/18e2c49f700100dq3q)|
 |杭州|[有赞](https://www.youzan.com)|2019年1月|996|[年会成了“鸿门宴”，这家公司“强制996”被员工举报](http://www.linkshop.com.cn/web/archives/2019/418163.shtml)|
@@ -181,4 +184,5 @@
 |上海/西安|[华勤通讯技术有限公司](http://www.huaqin.com/)|2019年4月|996| [看准网](https://www.kanzhun.com/gso238619.html?ka=com1-title) [知乎](https://www.zhihu.com/question/49628909/answer/522467068)|
 |北京|[小猪短租](http://www.xiaozhu.com/)|-----|997|4.22-5.10连续上班,晚上默认加班,不加班领导会找谈话。[工作截图](img/小猪短租.jpg)|
 |深圳|深圳市蓝色海洋教育科技有限公司|2019年4月|996|一家2019年4月新成立的公司，明确996招聘 [招聘截图](img/lansehaiyang-boss.jpeg)|
-|广州|广州明动软件股份有限公司|2018年9月|9106|每天晚上10:30才能走，甚至更晚，一周六天 [领导发的邮件](https://raw.githubusercontent.com/willywonkauk/staticref/master/1.png)|
+|广州|[广州明动软件股份有限公司](http://www.minstone.com.cn/)|2018年9月|9106|每天晚上10:30才能走，甚至更晚，经常通宵，一周六天 [领导发的邮件](https://raw.githubusercontent.com/willywonkauk/staticref/master/1.png)|
+|广西|广西安辰信息产业股份有限公司|2019年4月|大小周|考勤时间截图，可提供制度文件(https://github.com/euxeuxeux/996.ICU/blob/master/blacklist/img/%E6%90%9C%E7%8B%97%E6%88%AA%E5%9B%BE20190429115610.png)|
