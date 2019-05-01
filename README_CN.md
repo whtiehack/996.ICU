@@ -1,6 +1,8 @@
 [996.ICU](https://996.icu/#/zh_CN)
 =======
-### **请注意 996.ICU 没有除域名和库以外的任何官方账号、app、周边，请勿给予有心之人可乘之机。**
+**请注意 996.ICU 没有除域名和库以外的任何官方账号、app、周边，请勿给予有心之人可乘之机。**
+
+**996.icu的域名由于被错误的列入了spamhaus的列表，导致被.icu注册局停止解析。目前spamhaus已经在列表中移除了域名，接下来等待.icu注册局处理即可。**
 
 * [English version](./README.md)
 
@@ -30,7 +32,7 @@
 
 我能做什么？
 ---
-- 更新这个[名单](blacklist/README.md)（注附带证据），来帮助每一位工作者。
+- 更新这个[名单](blacklist/README.md)（注附带证据），来帮助每一位工作者。[为不熟悉GitHub劳动者准备的提交渠道](https://www.996action.com/index.php/889799)
 - 把这个[徽章](externals/instruction.md)添加到你的项目来支持 996.ICU
 - 为你的项目添加[反 996 许可证](LICENSE_CN)。
 - 给社区与项目发展提出新的[议案](proposal/README.md)。
