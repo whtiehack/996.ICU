@@ -116,11 +116,13 @@ We accept following crypto currencies:
 
 - **ETH**(ERC20): `0x10802049762A2761B2473E6c4b00f807eedC876E`
 
-- **USDT**(ERC20): `0x10802049762A2761B2473E6c4b00f807eedC876E`
+- **USDT**(ERC20): `0x6d8213608352cb8c415813227d40886f54fce360`
 
-- **BTC**(ERC20): `0x10802049762A2761B2473E6c4b00f807eedC876E`
+- **USDT**(Solana): `5sSNeWRT7PrF5nGbT3bJg5zXwo1j1Yvpjy2hn3SH6Q45`
 
-- **DOGE**(dogecoin): `DBKMT687qwHPERyvtkw1bocEetBKqfrRkd`
+- **BTC**(BTC Mainnet): `1AUbf6JqhSMGRnd91wyGVtnr5oSaaziWg7`
+
+- **DOGE**(DOGE Mainnet): `DBKMT687qwHPERyvtkw1bocEetBKqfrRkd`
 
 Donations will be used to sustain/maintain the website.
 
