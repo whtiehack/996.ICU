@@ -109,7 +109,21 @@ License
 
  - This draft is adapted from the MIT license. For a more detailed explanation, please see [Wiki](https://github.com/kattgu7/996-License-Draft/wiki). This license is designed to be compatible with all major open source licenses.  
  - For law professionals or anyone who is willing to contribute to future version directly, please go to [Anti-996-License-1.0](https://github.com/kattgu7/996-License-Draft). Thank you.
- 
+
+Donate
+---
+We accept following crypto currencies:
+
+- **ETH**(ERC20): `0x10802049762A2761B2473E6c4b00f807eedC876E`
+
+- **USDT**(ERC20): `0x10802049762A2761B2473E6c4b00f807eedC876E`
+
+- **BTC**(ERC20): `0x10802049762A2761B2473E6c4b00f807eedC876E`
+
+- **DOGE**(dogecoin): `DBKMT687qwHPERyvtkw1bocEetBKqfrRkd`
+
+Donations will be used to sustain/maintain the website.
+
 Contact
 ---
 
