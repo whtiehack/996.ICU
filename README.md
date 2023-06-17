@@ -1,3 +1,11 @@
+⚠️ Due to some recent drama, this repository will be temporarily archived.
+
+To dispel rumors:
+1. I am an individual, not a team.
+2. I am at home, not in prison.
+3. I have not received any funding or donations. Everything can be traced on the blockchain.
+
+
 [996.ICU](https://996.icu/#/en_US)
 =======
 **Please note that there exists NO other official account, app or merchandise except for the official domain and this repository.**
@@ -78,12 +86,10 @@ Community powers
 
  - [955.WLB](https://github.com/formulahendry/955.WLB) is a repo that maintains a whitelist of 955 work-life balanced companies.
  - [996.LIST](https://github.com/fengT-T/996_list) is a repo of a rank list of 996 companies and 955 companies.
- - [996.law](https://github.com/CPdogson/996.law) This is a manual for workers who want to conduct labor arbitration and litigation on their own.
  - [996.YAOCL](https://github.com/boycott996/yaocl) Yet Another Overtime Corps List, current another anonymous voting list.
  - [996.Leave](https://github.com/623637646/996.Leave) encourages & introduces working overseas.
  - [996.RIP](https://996.rip) Old news never vanished.
  - [996.Petition](https://github.com/xokctah/996.petition) initiates petitions by sending open letters to relevant government departments.
- - [996.action](https://github.com/CPdogson/996action) Supporters are encouraged to participate in public supervision.
  - [996.avengers](https://github.com/996-icu-avengers/Natasha) adds `996ICU` and `955WLB` tags on recruitment websites.
  - [996.OD](https://github.com/zheolong/996.OD.git) occupational diseases are the forewarning of ICU.
  - [996.Q](https://github.com/alexddhuang/996.Q) A repository to collect mocks, jokes, or gags about 996. 
@@ -114,15 +120,11 @@ Donate
 ---
 We accept following crypto currencies:
 
-- **ETH**(ERC20): `0x10802049762A2761B2473E6c4b00f807eedC876E`
+- **ETH**: `0x57a7e421c8edfc7f13612f68a54365fc729f2355`
 
-- **USDT**(ERC20): `0x6d8213608352cb8c415813227d40886f54fce360`
+- **USDT**(ERC20): `0x57a7e421c8edfc7f13612f68a54365fc729f2355`
 
-- **USDT**(Solana): `5sSNeWRT7PrF5nGbT3bJg5zXwo1j1Yvpjy2hn3SH6Q45`
-
-- **BTC**(BTC Mainnet): `1AUbf6JqhSMGRnd91wyGVtnr5oSaaziWg7`
-
-- **DOGE**(DOGE Mainnet): `DBKMT687qwHPERyvtkw1bocEetBKqfrRkd`
+- **BTC**: `1CKB19MxFppcXC3GMG84URuuegifsy8GAr`
 
 Donations will be used to sustain/maintain the website.
 
